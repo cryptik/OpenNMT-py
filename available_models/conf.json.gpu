@@ -1,0 +1,54 @@
+{
+    "models_root": "./available_models",
+    "models": [
+        {
+            "id": 100,
+            "ct2_model": "leidos-ru-en-v1",
+            "model": "leidos-ru-en-v1",
+            "device": "gpu",
+            "timeout": 600,
+            "on_timeout": "to_cpu",
+            "load": true,
+            "tokenizer": {
+                "src": {
+                    "type": "sentencepiece",
+                    "model": "leidos-ru-en-v1/sp.src.model"
+                },
+                "tgt": {
+                    "type": "sentencepiece",
+                    "model": "leidos-ru-en-v1/sp.tgt.model"
+                }
+            },            
+            "opt": {
+                "batch_size": 1,
+                "beam_size": 5,
+                "replace_unk": true,
+                "verbose": true
+            }
+        },{
+            "id": 101,
+            "ct2_model": "leidos-zh-en-v1",
+            "model": "leidos-zh-en-v1",
+            "device": "gpu",
+            "timeout": 600,
+            "on_timeout": "to_cpu",
+            "load": true,
+            "tokenizer": {
+                "src": {
+                    "type": "sentencepiece",
+                    "model": "leidos-zh-en-v1/sp.src.model"
+                },
+                "tgt": {
+                    "type": "sentencepiece",
+                    "model": "leidos-zh-en-v1/sp.tgt.model"
+                }
+            },            
+            "opt": {
+                "batch_size": 1,
+                "beam_size": 5,
+                "replace_unk": true,
+                "verbose": true
+            }
+        }
+    ]
+}

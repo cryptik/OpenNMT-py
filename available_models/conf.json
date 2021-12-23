@@ -1,0 +1,50 @@
+{
+    "models_root": "./available_models",
+    "models": [
+        {
+            "id": 100,
+            "ct2_model": "leidos-ru-en-v1",
+            "model": "leidos-ru-en-v1",
+            "timeout": -1,
+            "on_timeout": "unload",
+            "tokenizer": {
+                "src": {
+                    "type": "sentencepiece",
+                    "model": "leidos-ru-en-v1/sp.src.model"
+                },
+                "tgt": {
+                    "type": "sentencepiece",
+                    "model": "leidos-ru-en-v1/sp.tgt.model"
+                }
+            },            
+            "opt": {
+                "beam_size": 5,
+                "batch_size": 1,
+                "replace_unk": true,
+                "verbose": true
+            }
+        },{
+            "id": 101,
+            "ct2_model": "leidos-zh-en-v1",
+            "model": "leidos-zh-en-v1",
+            "timeout": -1,
+            "on_timeout": "unload",
+            "tokenizer": {
+                "src": {
+                    "type": "sentencepiece",
+                    "model": "leidos-zh-en-v1/sp.src.model"
+                },
+                "tgt": {
+                    "type": "sentencepiece",
+                    "model": "leidos-zh-en-v1/sp.tgt.model"
+                }
+            },            
+            "opt": {
+                "beam_size": 5,
+                "batch_size": 1,
+                "replace_unk": true,
+                "verbose": true
+            }
+        }
+    ]
+}
