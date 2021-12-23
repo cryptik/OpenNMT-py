@@ -110,3 +110,5 @@ ENV/
 
 # Tensorboard
 runs/
+available_models/leidos-ru-en-v1
+available_models/leidos-zh-en-v1
